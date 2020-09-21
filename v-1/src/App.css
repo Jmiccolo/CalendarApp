@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.DateBox {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  height: 50vw;
+  flex:1 0 50%;
+  margin: 10px 0;
+  color: navy;
 }
 
-.App-link {
-  color: #61dafb;
+.Date {
+  display:flex;
+  height: 25%;
+  width: calc(100%/7 - 2%);
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex:1 1 inherit;
+  border: 1px solid black;
+  padding: .5rem;
+}
+.Date:nth-of-type(1) {
+  border-radius: 20px 0px 0px 0px;
+}
+.Date:nth-of-type(7) {
+  border-radius: 0px 20px 0px 0px;
+}
+.Date:last-of-type {
+  border-radius: 0px 0px 20px 0px;
+}
+.Date:nth-last-of-type(7) {
+  border-radius: 0px 0px 0px 20px;
+}
+.Date h4 {
+  margin-top:0;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Selected {
+  background-color: grey;
+}
+
+.Disabled {
+  background-color: lightgrey;
 }
